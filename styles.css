@@ -1,0 +1,125 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 1.2rem;
+    line-height: 1.125rem;
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: #FFFBFC;
+    font-weight: lighter;
+}
+
+#page {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+    min-height: 100vh;
+    background-color: #FFFBFC;
+}
+
+.topNav {
+    grid-column: 1 / 13;
+    grid-row: 1 / 2;
+    display: flex;
+    justify-content: end;
+    column-gap: 3rem;
+    padding: 2rem;
+    position: sticky;
+    top: 0;
+    background-image: linear-gradient(to right, #30332E 0%, #010400 100%);
+}
+
+.header {
+    grid-column: 1 / 13;
+    grid-row: 2 / 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to right, #30332E 0%, #010400 100%);
+}
+.main {
+    grid-column: 1 / 13;
+    grid-row: 5 / 11;
+}
+
+.headerTxt {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 2rem;
+    margin: 2rem;
+}
+
+.headerTxt > h1 {
+    font-size: 5rem;
+    font-weight: lighter;
+    letter-spacing: 0.05rem;
+    color: #FFFBFC;
+    margin-bottom: 2.1rem;
+    animation: float 20s linear infinite;
+    
+}
+
+.headerTxt > h2 {
+    font-size: 1.5rem;
+    font-weight: lighter;
+    letter-spacing: 0.025rem;
+    color: #FFFBFC;
+}
+  
+.headerTxt > h2 > span {
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+}
+
+.headerTxt > p {
+    font-weight: lighter;
+    letter-spacing: 0.025rem;
+    color: #FFFBFC;
+    width: 50ch;
+    text-align: center;
+    line-height: 1.75rem;
+}
+
+.footer {
+    grid-column: 1 / 13;
+    grid-row: 11 / 13;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to right, #30332E 0%, #010400 100%);
+}
+
+.footerTxt > *  {
+    color: #FFFBFC;
+}
+
+.footerIcons {
+    display: flex;
+    column-gap: 1rem;
+}
+
+.bx {
+    color: #FFFBFC;
+}
+/* Key frames */
+@keyframes float {
+    0%, 20%, 40%, 60%, 80%, 100% {
+        transform: translateY(0px);
+    }
+    10%, 30%, 50%, 70%, 90% {
+        transform: translateY(2px);
+    }
+}
